@@ -3,6 +3,7 @@
 # step to write
 # download the CSV file
 # curl -o calfire.csv ...
+curl -s -o calfile.csv https://gis.data.cnra.ca.gov/datasets/CALFIRE-Forestry::recent-large-fire-perimeters-5000-acres.csv
 
 # print out the range of years found -- you may need to go in and edit the file
 # cut -d, ....
