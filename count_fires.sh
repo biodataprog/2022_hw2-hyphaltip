@@ -1,5 +1,6 @@
 #!/bin/bash -l
 
+echo "This is the beginning"
 # step to write
 # download the CSV file
 # curl -o calfire.csv ...
