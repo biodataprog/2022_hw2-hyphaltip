@@ -1,7 +1,7 @@
 # 2022_hw2_template
 HW2 - explore CalFire data
 
-3. Write a shell script called `count_fires.sh` which does all of the following.
+1. Write a shell script called `count_fires.sh` which does all of the following.
    * Download a comma delimited datasets from https://data.cnra.ca.gov/  which are listing of fires in several decades larger than 5000+. search for "Recent Large Fire Perimiters" in the search box. Click on the dataset it should take you to [this page](https://data.cnra.ca.gov/dataset/recent-large-fire-perimeters-5000-acres1). Download the [CSV file](https://gis.data.cnra.ca.gov/datasets/CALFIRE-Forestry::recent-large-fire-perimeters-5000-acres.csv). (hint use `curl`).
    * Print out the range of years that occur in this file (hint cut out the column you want, sort and get either the smallest or largest number)
       * you'll notice there are 2 weird numbers in there "48088" and "6901" - can you tell why? You will need to go into the file and correct something (this is reminder that data are not always clean!) to avoid this problem.
