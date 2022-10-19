@@ -43,6 +43,6 @@ LASTYEAR=""
 for YEAR in $(tail -n +2 calfires_2021.csv | cut -d, -f2 | sort | uniq)
 do
   # here we use AWK to accumulate values in a column
-  TOTAL=$(cut -d, -f2,13 calfires_2021.csv | grep "$YEAR," | awk -F, '{SUM+= $1} END{print SUM}')
+  TOTAL=$(cut -d, -f2,13 calfires_2021.csv | grep "$YEAR," | awk -F, '{SUM+= $2} END{print SUM}')
   echo "In Year $YEAR Total was $TOTAL"
 done
