@@ -32,7 +32,7 @@ done
 IFS=,
 tail -n +2 calfires_2021.csv | cut -d, -f6,13 | sort -t, -k2,2nr | head -n 1 | while read LARGEST LARGESTACRES
 do
-  echo "Largest fire was $LARGEST and burned $LARGESTACRES"
+  echo "Largest fire was the '$LARGEST' and burned $LARGESTACRES acres"
 done
 
 
@@ -42,7 +42,7 @@ TOTAL=0
 LASTYEAR=""
 for YEAR in $(tail -n +2 calfires_2021.csv | cut -d, -f2 | sort | uniq)
 do
-
-  TOTAL=$(tail -n +2 calfires_2021.csv | cut -d, -f2,13 | grep "$YEAR," | awk -F, '{SUM+= $1} END{print SUM}')
+  # here we use AWK to accumulate values in a column
+  TOTAL=$(cut -d, -f2,13 calfires_2021.csv | grep "$YEAR," | awk -F, '{SUM+= $1} END{print SUM}')
   echo "In Year $YEAR Total was $TOTAL"
 done
